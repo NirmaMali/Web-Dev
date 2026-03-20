@@ -1,0 +1,74 @@
+/* .container{
+    width: 600px;
+    height: 300px;
+    background-color: black;
+    display: grid;
+    grid-template-rows:50px 50px 50px 50px 50px;
+    grid-template-columns: auto auto auto;
+
+}
+.item{
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
+.one{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    background-color: red;
+} */
+
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: pink;
+
+    animation-name: colorAnimate, fontAnimation,widthAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count:infinite ;
+    animation-direction: alternate;
+    /* animation: alternate infinite ease-in 2s 0s colorAnimate, fontAnimation, widthAnimate; */
+}
+
+@keyframes fontAnimation{
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 40px;
+    }
+}
+
+@keyframes colorAnimate {
+    0%{
+        background-color: pink;
+    }
+    50%{
+        background-color: blue;
+    }
+    75%{
+        background-color: indigo;
+    }
+    100%{
+        background-color: darkslateblue;
+    }
+}
+
+@keyframes widthAnimate{
+    from{
+        width: 300px;
+    }
+    to{
+        width: 600px;
+    }
+}
+
+@media(min-width: 400px){
+    h1{
+        background-color: yellow;
+    }
+}

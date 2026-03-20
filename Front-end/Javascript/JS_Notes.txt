@@ -1,0 +1,712 @@
+                JAVASCRIPT
+PART-1
+To add functionality on our websites 
+
+Fundamentals (programming language)
+Using the Console -> Uses REPL (Read-Evaluate-Print-Loop), to setup the environment
+                    .js is the file extension 
+                    REPL on the console 
+                    to clear the console -> ctrl+L
+
+What is a Variable? 
+    A variable is simply the name of a storage location (container)
+    the values can be changed, must be meaningful 
+    a=5 b=10 -> variable=value
+        in console  a=5 b=10 age=23 name="tony" or 'tony'
+              after declaring u will get ur values  a prints 5 name prints tony and a+b prints 15 
+
+Data Types in JS - Primitive Types
+you dont have to declare the type explicitly like c,c++,java...., js automatically detects it
+There is a limit to numbers in js , 0.999999999999999999999999999999 =1
+    Number -  positive(14) & Negative(-4), Integers(45,-50), Floating numbers - with decimals (4.6,-8.9)
+    Boolean -
+    String -
+    Undefined - 
+    Null - 
+    Bigint -
+    Symbol -
+
+    a=25
+    typeof a -> give the type of a as number or wtever
+
+Operations in JS -> 
+        a=20
+        b=10 
+    Addition-> sum=a+b
+    Subtraction-> diff=a-b
+    Multiplication-> prod=a*b
+    Division-> div=a/b
+    Modulo(remainder operator)-> 12%5=2
+    Exponentiation(power operator)-> 2**3=8
+
+NaN in JS -> The NaN global property is a value representing Not-A-Number, typeof is still a number 
+    0/0
+    NaN - 1
+    NaN * 1
+    NaN + NaN
+
+Operator Precendence(Priority) -> This is the general order of solving an expression 
+    ()
+    **
+    *, /, % (left to right fcfs)
+    +, -
+
+let keyword -> (New)Syntax of declaring variables 
+    a=5 X
+    let a=5; let b;
+    let age=23; age=age+1;
+    let cgpa; cgpa=9.9;
+    let num1=1; let num2=2; let sum=num1=num2;
+    let side=4; let area=side**2;
+
+const keyword -> values of constants cant be changed with re-assignment & they cant be re-declared
+    const year=2025; 
+    year=2026; X
+    year=year+1; X
+    const pi=3.14;
+    const g=9.8;
+
+var keyword -> Old syntax of writing variables 
+    var age=23;
+    var cgpa=8.9;
+    var num1=1; var num2=2; var sum= num1+num2;
+
+    let age=23; age+2 -> still age value is 23 .... age=age+2 -> in this age becomes 25
+
+comments -> //
+
+Assignment Operators -> simple assignment operator a=b means b's value is stored in a
+    age=age+1 -> age+=1 
+    age=age-1 -> age-=1
+    age=age*1 -> age*=1
+    age=age/1 -> age/=1
+
+Unary Operator(single operator) -> 
+    age=age+1 -> age+=1 -> age++  //increment
+    age=age-1 -> age-=1 -> age--  //decrement
+    binary operators requires 2 operators 
+        unary operators requires 1 operator 
+    Pre-increment(change, then use) -> 
+        let age=10; let newAge=++age;
+    Post-increment(use, then change) -> 
+        let age=10; let newAge=age++;
+        
+Identifier Rules ->
+    All javascript variables must be identified with unique names (identifiers)
+        Names can contain letters, digits, underscores and dollar signs. (no space)
+        Names must begin with the letter 
+        Names can also begin with $ and _
+        Names are case sensitive (y and Y are different variables)
+        Reserved words (like JavaScript keywords) cannot be used as names
+
+    camelCase -> way of writing identifiers   Full Name
+        camelCase (JS naming convention)  -> let fullName;
+        snake_case  -> let full_name;
+        PascalCase  -> let FullName;
+
+Boolean in JS -> Boolean represents a truth values -> true or false | yes or No
+    let age=23;
+    let isAdult=true;                True X 
+    let age=13;
+    let isAdult=false;
+    we can change the type of variable in js simply by changing the value 
+
+What is TypeScript?  -> Static typed(fixed), where JS is dynamic typed \(change)
+    Designed by Microsoft
+
+String in JS -> Strings are text or sequence of characters 
+    let name="Tony Stark";
+    let role='ironman';
+    let char='a';
+    let num='23';
+    let empty=" ";
+    suppose u wanna print this is "apple" single quotes followed by double or vice versa
+    'this is "apple"' or "this is 'apple'"
+
+String Indices(position) -> 0 based indexing
+    let name="TONY_STARK"; starts from 0 
+    name[0] -> 'T'
+    name[1] -> 'O'...
+    to caluculate length -> name.length 
+    name[name.length-1]
+
+null and Undefined in JS -> 
+    undefined -> A variable that has not been assigned a value is of type undefined.  let a;
+    null -> The null value represents the intentional absence of any object value. To be explicitly assigned. let a=null;
+
+
+
+PART-2
+
+console.log() -> to write (log) a message on the console 
+    to link js with browser
+    console.log("Apna College");
+    console.log(1234);
+    console.log(2+2);
+    console.log("Apna"," College",123);
+    let num=1234; console.log(num);
+    console.log("Apna"," College",123,num,(1+7));
+
+Linking JS File ->
+    <script src="app.js"> </script>
+    this is written at the end of the body tag
+
+Template Literals -> they are used to add embedded expressions in a string. 
+    let a=5;
+    let b=10;
+    console.log(`Your pay ${a+b} rupees`); //back tick
+
+Operators in JS -> 
+    Arithmetic(+, -, *, /, %, **)
+    Unary(++, --)
+    Assignment(=, +=, -=, *=, /=, %= etc.)
+    Comparision -> to compare 2 values (>, >=, <, <=, ==, !=. ===)
+                    == -> compares value, not type 
+                            "123"==123 -> true
+                            1=='1' -> true
+                            0==' ' ->true
+                            0==false ->true
+                            null==undefined -> true
+                    === -> compares type & value  
+                            "123"===123 -> false
+                             1=='1' -> false
+                             0==' ' ->false
+                             0==false ->false
+                             null==undefined -> false
+        
+Comparision for non-numbers ->  unique code   'a'->61, 'b'->62..... 'A'->41, 'B'->42...
+                                        'a'>'A' -> true
+                                        'a'>'b' ->false
+                                        'b'<'c' ->true
+                                        'B'<'C' ->true
+                                        '*'<'&' ->false
+  
+Conditional Statements -> 
+            if-else
+            nested if-else
+            switch
+
+if Statement -> 
+        if(some condition){
+            //do smtg
+        }
+
+
+else if Statement -> 
+        if(condition1){
+            //do smtg
+        }
+        else if(condition2){
+            //do smtg
+        }
+        else if(condition2){
+            //do smtg
+        }
+
+else statement ->
+        if(condition1){
+            //do smtg
+        }
+        else{
+            //do smtg
+        }
+
+Nested if-else -> Nested is writing if-else inside eif-else statements. it can have many levels.
+        if(marks>=33){
+            if (marks>=80){
+                console.log("O");
+            }
+            else{
+                console.log("A");
+            }
+        }
+        else{
+            console.log("better luck next time!!");
+        }
+
+Logical Operators -> Logical operators to combine expressions 
+        -> && Logical AND 
+                (exp1)&&(exp2)
+                true && true -> true
+                true && false -> false
+                false && true -> false
+                false && false -> false
+
+        -> || Logical OR
+                (exp1)&&(exp2)
+                true && true -> true
+                true && false -> true
+                false && true -> true
+                false && false -> false 
+
+        -> ! Logical NOT
+                !(exp)
+                !true -> false
+                !false -> true
+
+
+truthy & falsy -> Everything in JS is true or false (in boolean context).
+                  This doesn't mean their value itself is false or true, but they are treated as false or true, 
+                  but they are treated as false or true if taken in boolean context.
+        Falsy values -> false, 0, -0, On(BigInt value), ""(empty string), null, undefined, NaN
+        Truthy values -> Everything else
+
+Switch Statement -> Used when we have some fixed values that we need to compare to.
+    switch(value){
+        case value1 : console.log(); break;
+        case value2 : console.log(); break;
+        .
+        .
+        .
+        default: console.log();
+    }
+
+Alert & Prompt ->
+        Alert -> displays an alert message on the page 
+                 alert("something is wrong");
+        Prompt -> displays a dialog box that asks for user for some input
+                 prompt("please enter your roll no.");
+
+-> to print smtg -> console.log
+-> to show error -> console.error
+-> to show warning -> console.warn
+.
+
+
+
+String Methods 
+        Methods - actions that can be performed on objects 
+        Format -> stringName.method()
+    
+    Trim method -> Trims whitespaces from both ends of string & returns a new one 
+                    changes are made in new string therefore strings are immutable 
+                    str.trim();
+
+Strings are Immutable in JS -> No changes can be made to strings 
+                                whenever we do try to make a change, a new string is created and old one remains same 
+str.trim()
+str.toUpperCase() 
+str.toLowerCase()
+
+String Methods with Arguments -> argument is a some value that we pass to the method. 
+    Format -> stringName.method(arg)
+
+indexOf() -> Returns the first index of occurrence of some value in string or gives -1 if not found
+            indexing starts from 0
+             let str="ilovecoding";
+             str.indexOf("love"); //1
+             str.indexOf("J"); //-1 
+             str.indexOf("o"); //2
+
+Method Chaining -> using one method after another. order of execution will be left to right 
+                    str.toUpperCase().trim()
+
+Method Slice -> returns a part of the original string as a new string 
+                        from back -1, -2 and from first 0,1,2
+                        str.slice(start,end)  end-1 is included not end 
+                        let str="ilovecoding";
+                        str.slice(5); //"coding
+                        str.slice(1,4); //love
+                        str.slice(-num)=str.slice(length-num)
+
+Replace -> searches a value in the string & returns a new string with the value replaced 
+            let str="ilovecoding";
+            str.slice("love","do");  //idocoding
+            str.slice("o","x");  //ilxvecoding
+
+Repeat -> returns a string with the number of copies of a string 
+            let str="mango";
+            str.repeat(3);  //mangomangomango
+
+Array (Data Structure) -> Linear collection of things 
+                        let students = ["aman","shradha","rajat"];
+                        for this typeof is object 
+                        because arrays are of type objects
+
+Creating Arrays -> 
+                    let marks=[99,85,93,76,62];
+                    let names=["adam","bob","catlyn"];
+                    let info=["aman",25,6.1];  //mixed Array
+                    let arr=[];  //empty array
+                    arr.length
+
+Arrays are mutable -> changes can be made to arrays 
+                      whenever we do try to make a change, changes are done in same array
+
+Array Methods -> push : add to end                                          cars.push("bmw");
+                 pop : delete from end & returns it                         cars.pop();
+                 unshift : add to start                                     cars.unshift("assa");
+                 shift : delete from start  & returns it                    cars.shift();
+                 indexOf : returns index of something                       cars.indexOf("audi");  if not then -1
+                 includes : search for a value true                         cars.include("xuv");    if not false
+                 concat : merge 2 arrays                                    cars.concat(bikes);
+                 reverse : reverse an array                                 cars.reverse(); 
+                 slice : copies a portion of an array                       cars.slice();  cars.slice(2);  cars.slice(2,3);  cars.slice(-2);
+                 splice : removes | replaces | add elements in place        cars.splice(4);   cars.splice(0,1);  cars.splice(0, 1, "black", "grey");
+                          splice(start, deleteCount, item0...itemN)
+                 sort : sorts an array                                      cars.sort();
+
+Array References -> address in memory (playing with address)
+                    "name" == or === "name" is true
+                    [1] === or == [1]  is false   
+                    let num=[1];
+                    value is place somewhere else (1) but that address is known for variable (num)
+                    let arr1=[1]  -> value of arr1 is 123(address)
+                    let arr2=[1]  -> value of arr2 is 456(address)   and in arrays adress are compared
+                
+
+Constant Arrays -> values arent changed 
+
+Nested Arrays -> multidimensional arrays (array of arrays)
+                nums=[[2,4],[3.6],[4,8]]
+
+Loops -> used to iterate a piece of code 
+        for loops -> for(initialisation ; condition ; updation){
+                         //do smtg
+                    }
+                    for (let i=1; i<=5 ; i++){
+                        console.log(i);
+                    }
+
+        Infinite Loops -> for (let i=1; i>=0; i++)
+                          for (let i=1; i<=5; i--)
+                          for (let i=1; ; i++)
+
+        Nested for loop -> for(let i=1; i<=3; i++){
+                             for(let j=1; j<=3; j++){
+                                console.log(i);
+                             }
+                           }
+        
+        while loop -> while(condition){
+                        //do smtg
+                     }
+                      let i=1;
+                      while(i<=5){
+                        console.log(i); i++;
+                      }
+
+
+        break keyword -> stops loop execution 
+
+        loops with arrays -> let fruits =["mango","apple",...]
+                             for(let i=0; i<fruits.length; i++){
+                                console.log(i,fruits[i]);
+                             }
+        
+        loops with nested arrays -> Nested loops with nested arrays
+                                    let heroes =[["ironman","thor",...],["superman",wonder woman",...]];
+                                    for(let i=0; i<heroes.length; i++){
+                                        console.log(`List #${i});
+                                        for(let j=0; j<heroes[i].kength; j++){
+                                            console.log(heroes[i][j]);
+                                        }
+                                    }
+
+        for of loop -> for(element of collection){
+                        //do smtg
+                        }
+                        for(fruit of fruits){
+                            console.log(fruit);
+                        }
+                        for(char of "apnacollege"){
+                            console.log(char);
+                        }
+        
+        nested for of loop -> for(list of heroes){
+                                    for(hero of list){
+                                        console.log(hero);
+                                    }
+                             }
+
+
+JS Object literals -> Used to store keyed collection & complex entities .
+                        property => (key, value) pair
+                        objects are a collection of properties
+                        Student has name, age, marks (key) nirma, 23,94 (value)
+                        Student is the object 
+                        compleex things are stored in object literals not in array
+
+                        creating -> 
+                                    let delhi = {
+                                        latitude: "28.7041 N",
+                                        longitude: "77.1025 E"
+                                    };
+
+                                    const student ={
+                                        name: "nirma",
+                                        age: 23,
+                                        marks: 94,
+                                        city: "mandya"
+                                    };
+
+                                    const item ={
+                                        price: 100.99,
+                                        discount: 50,
+                                        colors : ["red","pink"]
+                                    }
+                                    student is a object and all the key value pair called object literals are written in curly braces
+                                    const is written with objects 
+
+                        how to access /get values -> 
+                                    const student ={
+                                        name: "nirma",
+                                        age: 23,
+                                        marks: 94,
+                                        city: "mandya"
+                                    };
+                                    object["key"]
+                                    student["name"];   to use varialbes values we use this let prop = age; student[prop]; gives 23 this cananot be done using the dot operator 
+                                    student.name;
+
+                        Conversion in get values -> JS automatically converts objects keys to strings 
+                                                    even if we made the number as a key, the number will be converted to string 
+                                                    const obj{
+                                                        1: "a",
+                                                        2: "b",
+                                                        true: "c",
+                                                        null: "d", 
+                                                        undefined: "e: 
+                                                    };
+                                                    obj[1] - objects doesnt take index as input , it gets convereted into string and then read the value  but obj.1 gives error 
+                                                    obj[null] - here its not null keyword , its "null" (string null) obj.null gives values
+
+                        Add / Update Value ->
+                                    const student ={
+                                        name: "nirma",
+                                        age: 23,
+                                        marks: 94,
+                                        city: "mandya"
+                                    };
+                                    Change the city to "Mumbai" - student.city = "Mumbai";
+                                    Add a new property, gender: "female"  - student.gender="female" ;
+                                    Change the marks to "A" - student.marks ="A";
+                                    to delete - delete obj.key;
+                            
+                        Object of objects (Nested Objects) -> storing information of multiple students 
+                                            const classInfo = {
+                                                aman : {
+                                                    grade: "A+",
+                                                    city: "Delhi"
+                                                },
+                                                shradha : {
+                                                    grade : "A",
+                                                    city : "Pune"
+                                                },
+                                                karan : {
+                                                    grade : "O",
+                                                    city : "Mumbai"
+                                                }
+                                            };
+                                            to change -> classInfo.aman.city="pune";
+
+                        Array of Objects -> Storing information of multiple students 
+                                            const classInfo = {
+                                                {   
+                                                    name: "aman",
+                                                    grade: "A+",
+                                                    city: "Delhi"
+                                                },
+                                                {   
+                                                    name: "shradha",
+                                                    grade : "A",
+                                                    city : "Pune"
+                                                },
+                                                {   
+                                                    name: "karan",
+                                                    grade : "O",
+                                                    city : "Mumbai"
+                                                }
+                                            };
+
+                                            to change classInfo[1].city="mandya";
+
+                        Math Object -> Properties -> Math.PI , Math.E
+                                       Methods -> Math.abs(n) - removes Negative 
+                                                  Math.poe(a, b) - power  
+                                                  Math.floor(n) - nearest smallest Integers 5.99 = 5
+                                                  Math.ceil(n) - neraest largest integers  5.99 =6
+                                                  Math.random() - gives between 0 to 1 but never gives 1 its exclusive 
+                                                  Random Integers - From 1 to 10
+                                                                    Step 1: let num = Math.random(); 0.46747741318127045
+                                                                    Step 2: num = num*10; 4.6747741318127045 (btwn wt range u want multiply with max for 1-5 then *5)
+                                                                    Step 3: num = Math.floor(num); 4
+                                                                    step 4: num=num +1; 5
+                                                                    in one step -> let ran = Math.floor( Math.random() *10 ) +1 ;
+                                                                    between 1 to 100  -> Math.floor( Math.random() *100 ) +1 ;
+                                                                    between 1 to 5  -> Math.floor( Math.random() *5) +1 ;
+                                                                    between 20 to 25  -> Math.floor( Math.random() *5 ) +20 ;
+                                                                    between 21 to 25  -> Math.floor( Math.random() *5 ) +21 ;
+
+
+
+Functions in JS ->   
+                    Function Definition (telling JS)    
+                        function funcName(){                        function hello(){
+                            //do smtg                                    console.log("hello");
+                        }                                           }
+
+                    Function Calling (using the function)  
+                        funcName();                                   hello();                          
+
+Functions With Arguments -> Values we pass to the function 
+                            function funcName(arg1, arg2...){
+                                //do smtg
+                            }               
+                
+Return -> return keyword is used to return some value from the function 
+            input -> function does some work -> output
+                function funcName(arg1,arg2...){
+                    //do smtg 
+                    return val;
+                }
+            whatever code written after return doesnt work as the function stops at returns only
+            to return many vlaues we use objects 
+
+Scope -> Scope determines the accessibility of variables, objects, and functions from different parts of the code 
+         Function: Variables defined inside a function are not accessible(visible) from outside the function   
+                   inside a function = Globol + Function = Function wins 
+                   outside a function = Globol + Function = Global wins
+         Block: Variables declared inside a {} block cannot be accessed from outside the block (not applicable for var)
+         Lexical: A variable defined outside a function can be accessible inside another function defined after the variable declaration
+                    The opposite is NOT true 
+                    function outerfunc(){
+                        let x=5; let y=6;
+                        function innerfun(){
+                            let a=5;
+                            console.log(x);  prints 5
+                        }
+                        console.log(a);  doesnt prints
+                    }
+                    without function call the function doesnt work
+
+Function Expressions  -> nameless function but value is stored in a variable
+                        const variable = function(arg1, arg2, ...){
+                                //do or return smtg
+                        }
+
+Higher Order Functions -> A function that does one or both :
+                          takes one or multiple functions as Arguments
+                          returns a function
+                        function multipleGreet(func, count){
+                            for(let i=1; i<=count; i++){
+                                func();
+                            }
+                        }
+                        let greet =function(){
+                            console.log("hello");
+                        }
+                        multipleGreet(greet, 1000); or multipleGreet(function() {console.log("namaste")}, 1000);
+
+Higher Order Functions -> returns a function 
+                        function oddEvenTest(request){
+                            if(reuest=="odd"){
+                                return function(n){
+                                    console.log(!(n%2==0));
+                                }
+                            }else if (request == "even"){
+                                let even=function(n){
+                                    console.log(n%2==0);
+                                }
+                            }else{
+                                console.log("wrong request");
+                            }
+                        }
+
+Methods -> Actions that can be performed on an object 
+            const calculator ={
+                num:55,
+                add : function(a,b){
+                    return a+b;
+                },
+                sub : function(a,b){
+                    return a-b;
+                },
+                mul : function(a,b){
+                    return a*b;
+                }
+            }; 
+            OR
+            const calculator ={
+                
+                add (a,b){
+                    return a+b;
+                },
+                sub (a,b){
+                    return a-b;
+                },
+                mul (a,b){
+                    return a*b;
+                }
+            };
+
+            to access -> calculator.add(2,5);
+
+this Keyword -> "This" keyword refers to an object that is exceding the current piece of code 
+                const student{
+                    name:"nirma",
+                    age:23,
+                    eng:65,
+                    math:54,
+                    phy:98,
+                    getAvg(){
+                        let avg=(this.eng+this.math+this.phy)/3;       this refers to student object
+                        console.log(`${this.name} got avg marks =${avg}`);
+                    }
+                };
+                by default the value of this is window object (higher level object) 
+
+try & catch -> The try statement allows you to define a block of code to be tested for errors while it is being executed 
+                The catch statement allows you to define a block of code to be executed if an error occurs in the try block
+                try{
+                    console.log(a);
+                }
+                catch{
+                    console.log("variable a doesnt exist");
+                }
+
+Miscellaneous Topics 
+Arrow Functions -> we use arrow function in the variable
+                    const func = (arg1, arg2,...) => { function definition }
+                    const sum = (a, b) => {
+                        console.log(a+b);
+                    }
+
+Implicit return in Arrow function -> const func = (arg1, arg2...) => ( value );
+                                     const mul =(a,b) => (a*b);
+
+Set Timeout -> setTimeout(function, timeout ms)
+                console.log("hi there!");
+                setTimeout( () => { 
+                    console.log("Apna College");
+                }, 4000); 4sec waits
+                console.log("Welcome to");
+
+Set Interval -> setInterval(function, timeout)
+                setInterval( () =>{
+                    console.log("Apna college");
+                }, 2000);
+                clearInterval(id)
+
+this with Arrow Functions ->  
+                                Arrow -> in this there is lexical scope of this (parent scope)
+                                function -> in this the scope depends on calling object 
+
+                                const student ={
+                                    name:"amam",
+                                    marks: 95,
+                                    prop:this //global scope (window object )
+                                };
+
+forEach -> arr.forEach(some function definition or name);
+        let arr=[1,2,3,4,5];
+        function print(el){
+            console.log(el);
+        }
+        arr.forEach(print);
+        or 
+        arr.forEach(function(el){
+            console.log(el);
+                    })
+
+Map 

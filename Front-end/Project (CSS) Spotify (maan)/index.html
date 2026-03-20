@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS will go here */
+    </style>
+</head>
+<body>
+
+<div class="spotify-layout">
+    <div class="sidebar">
+        <div class="library-header">
+            <h3>Your Library</h3>
+            <span class="plus-icon">+</span>
+        </div>
+
+        <div class="scrollable-library-content">
+            <div class="library-card playlist-card">
+                <h4>Create your first playlist</h4>
+                <p>It's easy, we'll help you</p>
+                <button class="spotify-button">Create playlist</button>
+            </div>
+
+            <div class="library-card podcast-card">
+                <h4>Let's find some podcasts to follow</h4>
+                <p>We'll keep you updated on new episodes</p>
+                <button class="spotify-button">Browse podcasts</button>
+            </div>
+
+            <div class="placeholder-content" style="height: 200px; background-color: #1a1a1a; margin: 16px 0; padding: 10px; border-radius: 8px; color: #b3b3b3;">
+                <p>More library items would go here.</p>
+                <p>Scroll down to see this content.</p>
+            </div>
+            <div class="placeholder-content" style="height: 150px; background-color: #1a1a1a; margin: 16px 0; padding: 10px; border-radius: 8px; color: #b3b3b3;">
+                <p>Even more items.</p>
+            </div>
+            <div class="placeholder-content" style="height: 100px; background-color: #1a1a1a; margin: 16px 0; padding: 10px; border-radius: 8px; color: #b3b3b3;">
+                <p>Last item for testing scroll.</p>
+            </div>
+        </div>
+
+        <div class="library-footer">
+            <div class="footer-links-group">
+                <a href="#">Legal</a>
+                <a href="#">Safety & Privacy Center</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer-links-group">
+                <a href="#">About Ads</a>
+                <a href="#">Accessibility</a>
+            </div>
+            <div class="footer-links-group">
+                <a href="#">Cookies</a>
+            </div>
+            <button class="language-button">
+                <span class="icon-globe"></span> English
+            </button>
+        </div>
+    </div>
+
+    <div class="main-view-container">
+        <div class="top-navbar-main">
+            <div class="search-bar-wrapper">
+                <span class="icon-search"></span>
+                <input type="text" placeholder="What do you want to play?">
+                <span class="icon-document"></span>
+            </div>
+            <div class="top-nav-right-buttons">
+                <a href="#" class="top-nav-text-button">Premium</a>
+                <a href="#" class="top-nav-text-button">Support</a>
+                <a href="#" class="top-nav-text-button">Download</a>
+                <span class="vertical-separator"></span>
+                <a href="#" class="top-nav-text-button install-app-link">
+                    <span class="icon-download"></span> Install App
+                </a>
+                <a href="#" class="top-nav-text-button">Sign up</a>
+                <button class="login-button">Login</button>
+            </div>
+        </div>
+
+        <div class="main-content-scrollable">
+            <h1>Trending songs</h1>
+            <p>This is where your main Spotify content (like "Trending songs" and "Popular artists") will appear.</p>
+            <p>This section is independently scrollable, and the bar above it will stick.</p>
+
+            <div style="height: 1500px; background-color: #1a1a1a; padding: 20px; margin-top: 20px; color: #fff; border-radius: 8px;">
+                <h2>Explore Music and Podcasts</h2>
+                <p>Here you'll find personalized recommendations, charts, new releases, and much more.</p>
+                <p>Keep scrolling to see more content...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>End of main content dummy area.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="now-playing-bar">
+        <p>🎵 Song Title - Artist Name</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #8e9eab);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #222;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.night {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  color: #f0f0f0;
+}
+
+.traffic-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* Traffic Light Box */
+.traffic-light {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 30px 20px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  width: 130px;
+}
+
+.light {
+  width: 70px;
+  height: 70px;
+  background-color: #555;
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px #000;
+  transition: 0.4s;
+}
+
+.active-red {
+  background-color: #ff4d4d;
+  box-shadow: 0 0 20px #ff4d4d;
+}
+
+.active-yellow {
+  background-color: #ffd633;
+  box-shadow: 0 0 20px #ffd633;
+}
+
+.active-green {
+  background-color: #33cc66;
+  box-shadow: 0 0 20px #33cc66;
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.3; }
+}
+
+/* Control Panel */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.controls label {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.controls input {
+  width: 60px;
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.1), -4px -4px 10px rgba(255,255,255,0.5);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+body.night button {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 2px 2px 10px #000, -2px -2px 10px #444;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Countdown Ring */
+.countdown-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.circle circle {
+  fill: none;
+  stroke: #555;
+  stroke-width: 6;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+#countdown {
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Info Panel */
+.info {
+  text-align: center;
+}
+
+#message {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Night Mode */
+body.night .traffic-light {
+  background: rgba(30, 30, 30, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.night .circle circle {
+  stroke: #bbb;
+}

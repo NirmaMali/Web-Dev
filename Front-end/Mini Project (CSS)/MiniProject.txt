@@ -1,0 +1,17 @@
+Basic Design Principles 
+For better looking websites
+UI/UX 
+Canva Color wheel 
+(1)Color -> refer color wheel , Meaning of colors
+to highlight something on web then use bright yellow
+Subtle Color Combination - Monochromatic 
+Impactful Color Combination - Complementary
+High Contrast Combination - Triadic
+
+(2)Typography 
+style and appearance of text 
+max of 2 fonts in one section 
+https://fonts.google.com 
+
+Icons
+Google Icons, Font Awesome 

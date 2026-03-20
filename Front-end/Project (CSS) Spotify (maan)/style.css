@@ -1,0 +1,342 @@
+/* --- Global / Base Styles --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make html and body take full viewport height */
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Using Inter if linked, then fallbacks */
+    color: #fff; /* Default text color */
+    overflow: hidden; /* Prevent body scroll; specific elements will scroll */
+    background-color: #000; /* Overall Spotify dark background */
+}
+
+/* --- Spotify Layout Container (CSS Grid) --- */
+.spotify-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Sidebar width, Main content takes rest */
+    grid-template-rows: 1fr auto; /* Main content area height, auto for fixed bar */
+    height: 100vh; /* Full viewport height */
+}
+
+/* --- Sidebar Styling (Grid Item) --- */
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #000000; /* Pure black for sidebar background as seen in screenshot */
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Library Header */
+.library-header {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+}
+
+.library-header h3 {
+    color: #FFFFFF; /* Pure white for "Your Library" */
+    font-size: 1rem; /* Adjust if needed */
+    font-weight: 700; /* Bold */
+    margin: 0;
+}
+
+.plus-icon {
+    color: #B3B3B3;
+    font-size: 1.5rem; /* Adjust if needed */
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+.plus-icon:hover {
+    color: #FFFFFF;
+}
+
+/* --- Scrollable Content Area within Sidebar --- */
+.scrollable-library-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 8px; /* For scrollbar space */
+    padding-left: 8px; /* Consistent left padding for cards */
+    margin-bottom: 16px;
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari) */
+.scrollable-library-content::-webkit-scrollbar,
+.main-content-scrollable::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.scrollable-library-content::-webkit-scrollbar-thumb,
+.main-content-scrollable::-webkit-scrollbar-thumb {
+    background-color: #535353; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+.scrollable-library-content::-webkit-scrollbar-track,
+.main-content-scrollable::-webkit-scrollbar-track {
+    background-color: #282828; /* Color of the scrollbar track */
+}
+
+
+/* Library Cards (inside scrollable-library-content) */
+.library-card {
+    background-color: #242424; /* Card background */
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.library-card h4 {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.library-card p {
+    font-size: 0.8rem;
+    color: #B3B3B3;
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+/* Spotify Button (used in cards) */
+.spotify-button {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-radius: 500px; /* Pill shape */
+    padding: 10px 18px; /* Adjusted padding */
+    font-size: 0.85rem; /* Slightly larger font */
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, background-color 0.2s ease;
+}
+
+.spotify-button:hover {
+    transform: scale(1.04); /* Slight scale up */
+    background-color: #F0F0F0;
+}
+
+/* Library Footer */
+.library-footer {
+    flex-shrink: 0;
+    padding: 16px;
+    margin-top: auto; /* Push to bottom of sidebar */
+}
+
+.footer-links-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
+.footer-links-group a {
+    color: #B3B3B3;
+    text-decoration: none;
+    font-size: 0.68rem; /* Smaller font size */
+    margin-right: 12px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.footer-links-group a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+
+/* Language Button (in footer) */
+.language-button {
+    background-color: transparent;
+    border: 1px solid #727272; /* Border color */
+    border-radius: 500px;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.language-button:hover {
+    border-color: #FFFFFF;
+}
+
+/* Generic Icon Placeholders (replace with actual SVGs/Font Awesome) */
+.icon-globe::before { content: '🌐'; font-size: 1rem; }
+.icon-search::before { content: '🔍'; font-size: 1rem; }
+.icon-document::before { content: '📄'; font-size: 1rem; } /* This is for the list/grid icon */
+.icon-download::before { content: '⬇️'; font-size: 1rem; }
+
+
+/* --- Main View Container (Grid Item - now a Flex Container itself) --- */
+.main-view-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: #121212; /* Main content background */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* --- Sticky Top Navigation Bar for Main View --- */
+.top-navbar-main {
+    flex-shrink: 0;
+    height: 60px; /* Consistent height */
+    background-color: #070707; /* Dark background as seen in screenshot */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: sticky; /* Sticky positioning */
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Subtle shadow when scrolled */
+}
+
+.top-navbar-main .search-bar-wrapper {
+    background-color: #242424; /* Darker background for search input container */
+    border-radius: 500px; /* Pill shape */
+    height: 38px; /* Height of the search bar */
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 10px;
+    width: 380px; /* Fixed width as seen in screenshot */
+    max-width: 50%; /* Flexible if screen size changes */
+}
+
+.top-navbar-main .search-icon-inside-bar {
+    color: #B3B3B3;
+    font-size: 1.1rem; /* Slightly larger icon */
+    line-height: 1; /* Ensure proper vertical alignment */
+}
+
+.top-navbar-main input[type="text"] {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 0.95rem; /* Slightly larger font */
+    padding: 0;
+    line-height: 1.2;
+}
+
+.top-navbar-main input[type="text"]::placeholder {
+    color: #A7A7A7; /* Placeholder color */
+    opacity: 1; /* Ensure full opacity */
+}
+
+.top-navbar-main .search-filter-icon {
+    color: #B3B3B3;
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px; /* Make clickable area bigger */
+    transition: color 0.2s ease;
+}
+
+.top-navbar-main .search-filter-icon:hover {
+    color: #FFFFFF;
+}
+
+.top-navbar-main .top-nav-right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between items */
+}
+
+.top-navbar-main .top-nav-text-button {
+    color: #B3B3B3;
+    text-decoration: none;
+    font-size: 0.85rem; /* Consistent font size */
+    font-weight: 700; /* Bold */
+    padding: 5px 0;
+    transition: color 0.2s ease;
+    display: flex; /* For icon alignment */
+    align-items: center;
+    gap: 5px;
+}
+
+.top-navbar-main .top-nav-text-button:hover {
+    color: #FFFFFF;
+}
+
+.top-navbar-main .vertical-separator {
+    width: 1px;
+    height: 18px;
+    background-color: #3E3E3E; /* Separator color */
+    margin: 0 5px;
+}
+
+.top-navbar-main .download-icon {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.top-navbar-main .login-button {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
+    border: none;
+    border-radius: 500px; /* Pill shape */
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: transform 0.1s ease-in-out, background-color 0.2s ease;
+}
+
+.top-navbar-main .login-button:hover {
+    transform: scale(1.05);
+    background-color: #F6F6F6;
+}
+
+/* --- Actual Scrollable Main Content --- */
+.main-content-scrollable {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px; /* Padding for the main content area below the sticky bar */
+    box-sizing: border-box;
+    /* This section starts directly below the sticky nav bar */
+}
+
+/* H1 for content sections like "Trending songs" */
+.main-content-scrollable h1 {
+    color: #FFFFFF;
+    font-size: 1.5rem; /* Adjust as per screenshot */
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px; /* Space below heading */
+}
+
+
+/* --- Fixed Now Playing Bar (Grid Item) --- */
+.now-playing-bar {
+    grid-column: 1 / 3; /* Spans across both sidebar and main content columns */
+    grid-row: 2 / 3; /* Sits in the second row (bottom) */
+    height: 90px; /* Standard height for Spotify's bottom bar */
+    background: linear-gradient(to right, #1DB954, #1ED760); /* Spotify green gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5); /* Subtle shadow above the bar */
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traffic Light System</title>
+  <link rel="stylesheet" href="traffic.css" />
+</head>
+<body>
+  <div class="controls">
+    <label>Red (sec): <input type="number" id="redTime" value="3" min="1" /></label>
+    <label>Green (sec): <input type="number" id="greenTime" value="3" min="1" /></label>
+    <label>Yellow (sec): <input type="number" id="yellowTime" value="2" min="1" /></label>
+    <div class="buttons">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn">Stop</button>
+      <button id="nextBtn">Next</button>
+      <button id="nightToggle">Night Mode</button>
+    </div>
+  </div>
+
+  <div class="traffic-wrapper">
+    <div class="traffic-light">
+      <div class="light red" id="red"></div>
+      <div class="light yellow" id="yellow"></div>
+      <div class="light green" id="green"></div>
+    </div>
+
+    <div class="info">
+      <div id="message">System Ready</div>
+      <div class="countdown-container">
+        <svg class="circle" width="80" height="80">
+          <circle r="35" cx="40" cy="40" />
+        </svg>
+        <div id="countdown">0</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="traffic.js"></script>
+</body>
+</html>

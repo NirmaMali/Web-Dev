@@ -1,0 +1,143 @@
+<!-- HTML: HyperText Markup Language -->
+
+HTML is not case sensitive
+MDN--> Resource to learn 
+emmit.io-> documentation -> cheatsheet
+
+<!-- HTML Elements
+Paragraph <p> </p>
+Heading <h1> </h1>
+Bold <b> </b>
+Italic <i> </i>
+underline <u> </u>
+nested tags <p> <b>  </b> </p>  -->
+<!-- <p>This is <b> Nirma Mali</b> </p> -->
+
+<!-- Lists in HTML
+ul -> Unordered List
+ol
+li -> List Item -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in HTML</title>
+</head>
+<body>
+    <ul>
+        <li>Bread</li>
+        <li>Butter</li>
+        <li>Jam</li>
+    </ul>
+    <ol type="1">
+        <li>Bread</li>
+        <li>Butter</li>
+        <li>Jam</li>
+    </ol>
+</body>
+</html> -->
+
+<!-- HTML Attributes
+Attributes are used to add more information to the tag.
+<html lang="en">
+<ol type="a">    -->
+
+<!-- Anchor Element
+Used to add links to your page.
+<a href="https://www.google.com">Google</a> -->
+
+Inside href 2 types of links Absolute link & Relative link
+Absolute link: available same on internet
+Relative link: from one page(html) to page(html) (inside our file system)
+
+Image Elements
+Used to add image to your page 
+<img src="image.png" alt="Random Image">
+
+Br tag
+Used to add next line(line breaks) to your page 
+<br>
+
+Bold,Italic, Underline Tags
+<b>Bold<\b>
+<i>Italic<\i>
+<u>undeline<\u>
+
+
+<!--Inline elements - takes the full width available , start from new line, h1 , p, div
+Block elements - takes up only necessary width , dont start from new line, a, img, span 
+-->
+
+<!--Div element : Content division Element
+Div is a container used to hold other html elements or group elements together
+It is a block element -->
+
+<!--Span element
+Span is also a generic container used to hold other html elements or group elements together
+It is an inline element-->
+
+<hr>: Horizontal ruler
+<br>: Break line 
+
+a<sup>2</sup> - SuperScript
+H<sub>2</sub> - SubScript
+
+<!--Semantic Markup: It is the markup that relates to the meaning of Content
+2 types
+Semantic : meaning understandable, h1, p, img, video
+Non semantic : cant understand meaning, div span 
+-->
+
+HTML Entites 
+Entity is a piece of string begins with an ampersand (&) and ends with semicolon (;)
+Used to display reserved characters
+nbsp - non breaking space
+< - &lt;
+> - &gt;
+heart - &hearts;
+& - &amp;
+" - &quot;
+
+Tables in HTML -> Combination of Rows & Column
+Tables are used to represent real life table data
+Attributes of Table are Rows & Column 
+<tr> used to display table row
+<td> used to display table data
+<th> used to display table header
+
+<thead> to wrap table header
+<tbody> to wrap table body
+<tfoot> to wrap table footer
+
+Colspan & Rowspan Attributes
+used to create cells which spans over multiple rows or columns
+
+Forms in HTML
+Action Attribute -> It is used to define what action needs to be performed when a
+form is submitted or where the form data should be sent
+
+Form Elements
+* used to create multiple form controls
+* there are multiple types of inputs that can be created using type Attributes
+action attribute 
+<form action="/action">
+
+placeholder: what needs to be shown on screen 
+
+Type Attribute
+<input>
+<input type="text">
+<input type="password">
+<input type="number">
+<input type="time">
+<input type="color">
+
+Button 
+<button type="submit"> Submit </button
+<button type="resett"> Submit </button
+<button type="button"> Submit </button
+
+ <label for="name">Name:</label>
+ <input type="text"placeholder="Writeyourname"id="name" />

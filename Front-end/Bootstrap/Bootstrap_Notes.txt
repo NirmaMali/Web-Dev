@@ -1,0 +1,31 @@
+                Bootstrap 
+Framework in CSS (toolkit)
+already built-in buttons, nav bar, forms etc we should choose and apply it 
+Works on the concept of Flex-box -> pre-built components as butons, forms, navbar, card
+can be done using css also but it takes more time 
+
+What is Bootstrap? 
+It is a powerful, feature-packed frontend toolkit. 
+Build anything-from prototype to production- in minutes.
+It includes pre-built CSS files
+->Makes development faster and easier
+->Good choice of pre-built components
+->good browser compatibility
+->we can install bootstrap but fastest way is to attach link in html document
+
+cdn-> content delivery network (the content is delivered to you from the nearest server) used in below links to load the content much faster 
+CSS-> 	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css      -> place this in head tag using link tag
+JS->    https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js  -> place this in end of body tag using script tag
+
+suppose the css link is written first and then the style.css file linked later then style.css will override
+so you choose which to place first
+
+Components -> pre-built and reusable piece of user interface (UI)  Eg.,button, forms
+Layouts -> overall structure and arrangement of the elements   Eg., container, grid
+
+Container -> Layout 
+Containers are used to contain, pad and (sometimes) center the content within them
+
+Components -> Buttons , Badges (no of mssges +10 displayed on wtsapp logo)
+Alert -> pop up mssges
+button group -> the between all buttons is removed and grouped together
