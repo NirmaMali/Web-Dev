@@ -1,12 +1,21 @@
 import './App.css'
 import TodoList from './TodoList'
 import Lottery from './Lottery'
+import Ticket from './Ticket'
+import { sum } from './helper'
 
 function App() {
 
+  let winCondition = (ticket) =>{
+    return ticket[0] === 0;
+  }
+
   return (
     <>
-      <Lottery />
+
+     <Lottery n={3} winCondition={winCondition}  />
+      
+
     </>
   )
 }
