@@ -1,0 +1,15 @@
+import {useState} from 'react'
+export default function Form(){
+    let [fullName, setFullName] = useState('');
+
+    let handleNameChange =(event)=>{
+        setFullName(event.target.value);
+    }
+
+    return (
+        <form action="">
+            <input placeholder="enter full name" type='text' value={fullName} onChange={handleNameChange} />
+            <button>Submit</button>
+        </form>
+    )
+}
