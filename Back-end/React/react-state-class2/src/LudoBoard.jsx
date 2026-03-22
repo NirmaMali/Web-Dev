@@ -32,7 +32,7 @@ export default function LudoBoard() {
 
     return (
         <div>
-            <p>Ludo Board</p>
+            <p>Ludo Board(Object & State)</p>
             <div className="board">
                 <p>Blue moves ={moves.blue} </p>
                 <button style={{ backgroundColor: "blue" }} onClick={updateBlue}>
