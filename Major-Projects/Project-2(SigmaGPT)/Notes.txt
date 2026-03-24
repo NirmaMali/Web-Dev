@@ -1,0 +1,12 @@
+create folders (SigmaGPT)
+ |--Frontend (Reactjs)
+ |--Backend (Nodejs)
+for database (MongoDB)
+
+First we will create backend 
+backend
+  |--server.js (Initial Backend Testing)
+in terminal 
+    -> cd Backend
+    -> npm i express nodemon cors 
+
